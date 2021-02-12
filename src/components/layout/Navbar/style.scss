@@ -1,0 +1,85 @@
+@import '../../../style/abstracts/variables';
+
+.navbar {
+	background-color: $primary-color;
+	padding: 2rem 1rem;
+	width: 18%;
+	//flex: 1;
+
+	&-item {
+		list-style: none;
+		display: block;
+		margin: 0.5rem 1rem;
+		position: relative;
+		z-index: 1;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+			width: 100%;
+			height: 1px;
+			content: '';
+			background: $tertiary-color;
+			opacity: 0;
+			z-index: -1;
+			transition: all 0.4s ease-out;
+		}
+
+		&:hover::after {
+			opacity: 1;
+			transform: scale(1.1);
+			height: 100%;
+		}
+	}
+
+	&-links {
+		text-decoration: none;
+		color: $dark-color;
+		font-weight: 500;
+		display: block;
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+			outline: none;
+		}
+	}
+}
+
+/* SHIFT */
+nav.shift ul li a {
+	position: relative;
+	z-index: 1;
+}
+nav.shift ul li a:hover {
+	color: #91640f;
+}
+nav.shift ul li a:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 1px;
+	content: '.';
+	color: transparent;
+	background: #f1c40f;
+	visibility: none;
+	opacity: 0;
+	z-index: -1;
+}
+nav.shift ul li a:hover:after {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+}

@@ -1,0 +1,70 @@
+@import '../../../style/abstracts/variables';
+
+.resources {
+	&-list {
+		text-align: start;
+		width: max-content;
+		margin: 0 auto 4rem;
+
+		&-item {
+			padding: 0.5rem;
+		}
+
+		&-link {
+			display: inline-block;
+			color: $dark-color;
+			font-weight: 500;
+
+			&:hover {
+				color: $heading-color;
+			}
+		}
+
+		&-icon {
+			color: $primary-color;
+			font-size: 2.3rem;
+			margin-bottom: -0.5rem;
+			margin-right: 1.5rem;
+		}
+	}
+
+	&-letter {
+		&-link {
+			padding: 0 1rem;
+			display: inline-block;
+			color: darken($secondary-color, 25%);
+			transition: all 0.2s ease-out;
+
+			&:hover {
+				color: $secondary-color;
+				transform: translateY(-0.1rem) scale(1.1);
+			}
+		}
+
+		&-section {
+			margin: 4rem 2.5rem;
+			padding: 4rem 2rem;
+			background-color: lighten($plain-color, 2%);
+			box-shadow: 0 0.7rem 2rem 2px rgba(84, 67, 50, 0.15);
+
+			.heading-primary {
+				text-align: start;
+				margin-left: 3rem;
+			}
+
+			.heading-tertiary {
+				margin: 1rem 6rem 0.5rem;
+			}
+		}
+
+		&-item {
+			padding: 0.5rem 0;
+
+			&-extra {
+				margin: 0.3rem 6rem 0;
+				color: $danger-color;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
